@@ -7,7 +7,7 @@ expenses.read_expenses('data/spending_data.csv')
 
 spending_categories = []
 for expenses in expenses.list:
-    spending_categories.append(expense.category)
+    spending_categories.append(Expense.category)
 
 spending_counter = collections.Counter(spending_categories)
 print(spending_counter)
@@ -19,4 +19,3 @@ fig, ax = plt.subplots()
 ax.bar(categories, count)
 ax.set_title('# of Purchases by Category')
 plt.show()
-
